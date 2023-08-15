@@ -14,12 +14,9 @@ const incrementScore = () =>{
     score.innerText = +score.innerText + 10
 }
 
-let snake = [
-    {x: 270, y: 240}
-   
-    
-    
-]
+const initialPosition = {x: 270 , y: 240}
+
+let snake = [initialPosition]
 const ramdomNumber = (min, max) =>{
     return Math.round(Math.random()* (max - min) + min)
 }
@@ -156,9 +153,9 @@ document.addEventListener("keydown",({key})=>{
 buttonPlay.addEventListener("click", () => {
     score.innerText = "00"
     menu.style.display = "none"
-    canvas.style.filter = "none"
+    
 
-    snake = {x: 270, y: 240}
+    snake = [initialPosition]
 
 })
 
